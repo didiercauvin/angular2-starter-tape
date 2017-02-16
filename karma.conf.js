@@ -6,8 +6,7 @@ module.exports = function(config) {
     plugins: [       
       require('karma-webpack'),
       require('karma-tap'), 
-      require('karma-phantomjs-launcher'),
-      require('karma-tape-reporter')
+      require('karma-phantomjs-launcher')
     ], 
  
     basePath: './', 
