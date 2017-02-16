@@ -12,13 +12,14 @@ module.exports = function(config) {
  
     basePath: './', 
     frameworks: [ 'tap' ], 
-    files: [ 
-        'node_modules/es6-shim/es6-shim.js',
-        'karma.entry.js'
+    files: [
+        'karma.libs.js',
+        'src/tests/**/*.ts'
      ], 
 
     preprocessors: { 
-        'karma.entry.js' : [ 'webpack' ] 
+        'karma.libs.js'     : [ 'webpack' ],
+        'src/tests/**/*.ts' : [ 'webpack' ]
     }, 
 
     webpack: require('./webpack.test.config'),
